@@ -13,14 +13,20 @@ namespace ProductsWithRouting.Controllers
     public class UsersController : Controller
     {
         private List<User> myUsers;
+        private readonly string userId = "df2323eoT";
 
         public UsersController(Data data)
         {
             myUsers = data.Users;
         }
 
-        public IActionResult Index(string id)
+        public IActionResult Index([FromForm] string id)
         {
+            if(id != userId)
+            {
+                return Unauthorized();
+            }
+
             return View(myUsers);
         }
 
