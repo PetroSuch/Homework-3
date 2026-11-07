@@ -4,5 +4,24 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+
+    <div class="row justify-content-center my-4">
+        <div class="col-12 col-md-8 col-lg-5">
+            <div class="card border-0 shadow-sm text-left">
+                <div class="card-body p-4">
+                    <h2 class="h4 mb-2">User access</h2>
+                    <p class="text-muted mb-4">Enter your access key to view the users list.</p>
+                    <form method="post" action="/users/index">
+                        <div class="form-group">
+                            <label for="access-key">Access key</label>
+                            <input type="password" id="access-key" name="id" class="form-control" placeholder="Enter access key" />
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Open users</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
