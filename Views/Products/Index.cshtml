@@ -25,23 +25,23 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @*@Html.ActionLink("Edit", , )*@ Edit |
-                @*@Html.ActionLink("Details", , )*@ View |
-                @*@Html.ActionLink("Delete", , )*@ Delete
-            </td>
-        </tr>
-}
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Edit", , )*@ <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        @*@Html.ActionLink("Details", , )*@ <a asp-action="View" asp-route-id="@item.Id">View</a> |
+                        @*@Html.ActionLink("Delete", , )*@ <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+        }
     </tbody>
 </table>
